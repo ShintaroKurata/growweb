@@ -1,0 +1,7 @@
+phpmyadmin/
+.docker/
+[theme]/
+wp-content/plugins/
+wp-content/languages/
+wp-content/upgrade/
+wp-content/uploads/
