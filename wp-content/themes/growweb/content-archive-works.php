@@ -4,8 +4,8 @@
             <div class="blog-image"><?php the_post_thumbnail(); ?></div>
             <div class="blog-category">
                 <?php
-                $category = get_the_category(); 
-                echo $category[0]->cat_name;
+                $terms = get_the_terms($post->ID,'works_cat');
+                    echo $terms[0]->name;
                 ?>
             </div>
         </div>

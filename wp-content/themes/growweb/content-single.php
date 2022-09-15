@@ -2,10 +2,10 @@
             <?php the_content(); ?>
             <div class="more-content">
                 <div class="prev">
-                    <a class="another-link prev-arrow" href="">NEXT</a>
+                    <?php previous_post_link(); ?>
                 </div>
                 <div class="next">
-                    <a class="another-link next-arrow" href="">PREV</a>
+                    <?php next_post_link(); ?>
                 </div>
             </div>
     </section>

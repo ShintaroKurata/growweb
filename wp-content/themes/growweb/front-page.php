@@ -4,22 +4,42 @@
             <h2 class="section-title">お知らせ</h2>
                         <ul class="news-list">
                             <?php
-                                if(have_posts()):
-                                    while(have_posts()):the_post();
+                            $args = array(
+                                'posts_per_page'   => 5, 
+                                'orderby'          => 'ID', 
+                                'order'            => 'DESC',
+                            );
+
+                            $datas = get_posts( $args );
+
+                            if ( $datas ): 
+
+                            foreach ( $datas as $post ): 
+                                setup_postdata( $post ); 
                             ?>
-                                <a href="<?php the_permalink(); ?>">
+                                    <a href="<?php echo get_permalink($post->ID); ?>">
                                     <li>
-                                        <div class="news-tag">NEWS</div>
+                                        
+                                        <div class="news-tag">
+                                            <?php
+                                            $category = get_the_category(); 
+                                            echo $category[0]->cat_name;
+                                            ?>
+                                        </div>
                                         <time class="release"><?php the_time('Y.m.d'); ?></time>
-                                        <p class="news-title"><?php the_title(); ?><p>
+                                        <p class="news-title"><?php echo get_the_title($post->ID); ?><p>
+                                        
                                     </li>
-                                </a>
-                            <?php
-                                endwhile;
-                            endif;
-                            ?>
+                                    </a>
+                            <?php endforeach; ?>
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
                         </ul>
-                <a><button class="btn2 news-button">View more</button></a>
+                <?php
+                $category_id = get_cat_ID('お知らせ');
+                $category_link = get_category_link( $category_id );
+                ?>
+                <a href="<?php echo esc_url( $category_link ); ?>"><button class="btn2 news-button">View more</button></a>
         </section>
     <!-- news section end -->
 
@@ -62,27 +82,43 @@
     <!-- works section start -->
         <section class="works-section">
             <h2 class="section-title">制作事例</h2>
-            <div class="works-grid">
-                <div class="works-content">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/aleinter-cover.png">
-                    <div class="works-title"><p>株式会社ALE INTERNATIONAL</p></div>
-                    <div class="works-tag"><i class="fa-solid fa-tags"></i><p>アパレル</p></div>
-                </div>
+            <ul class="works-grid">
+                <?php
+                $taxonomy_name = 'works'; // タクソノミーのスラッグ名を入れる
+                $args = array(
+                    'posts_per_page'   => 3, 
+                    'orderby'          => 'ID', 
+                    'order'            => 'DESC',
+                );
 
-                <div class="works-content">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/aleinter-cover.png">
-                    <div class="works-title"><p>株式会社ALE INTERNATIONAL</p></div>
-                    <div class="works-tag"><i class="fa-solid fa-tags"></i><p>アパレル</p></div>
-                </div>
+                $taxonomys = get_the_terms( $taxonomy_name,$args );
 
-                <div class="works-content">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/aleinter-cover.png">
-                    <div class="works-title"><p>株式会社ALE INTERNATIONAL</p></div>
-                    <div class="works-tag"><i class="fa-solid fa-tags"></i><p>アパレル</p></div>
-                </div>
-            </div>
+                    foreach($taxonomys as $taxonomy):
+                     
+                ?>
+                <a href="<?php echo get_permalink($taxonomy->ID); ?>">
+                    <li class="works-content">
+                        <?php
+                        $thumbnail_id = get_post_thumbnail_id($taxonomy->ID);
+                        $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
+                        echo '<img src="$thumb_url[0]">';
+                        ?>
+                        
+                        <div class="works-title"><p><?php echo get_the_title($taxonomy->ID); ?></p></div>
+                        <div class="works-tag"><i class="fa-solid fa-tags"></i><p>アパレル</p></div>
+                    </li>
+                </a>       
 
-            <a><button class="btn2 works-button">View more</button></a>
+            </ul>
+                    <?php
+                    endforeach;
+                    ?>
+            <?php
+            $category_id = get_cat_ID();
+            $category_link = get_category_link( $category_id );
+            ?>
+
+            <a href="<?php echo esc_url( $category_link ); ?>"><button class="btn2 works-button">View more</button></a>
         </section>
     <!-- works section end -->
 

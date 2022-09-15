@@ -19,7 +19,7 @@
                 <div class="main-header">
                             <!-- logo start -->
                             <div class="logo">
-                                    <a href="<?php bloginfo('url'); ?>">GROWWEB</a>
+                                <a href="<?php bloginfo('url'); ?>">GROWWEB</a>
                             </div>
                             <!-- logo end -->
 
@@ -85,11 +85,6 @@
                             <div class="post-tag">
                                 <ul class="post-meta list-inline">
                                     <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"><i class="fa fa-clock-o"></i> <?php the_time('Y.m.d');?></li>
-                                </ul>
-                                <ul class="post-meta-comment">
-                                    <li class="author">
-                                        by <?php the_author(); ?>
-                                    </li>
                                 </ul>
                             </div>
                         </div>

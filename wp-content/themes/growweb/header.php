@@ -86,11 +86,6 @@
                                 <ul class="post-meta list-inline">
                                     <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"><i class="fa fa-clock-o"></i> <?php the_time('Y.m.d');?></li>
                                 </ul>
-                                <ul class="post-meta-comment">
-                                    <li class="author">
-                                        
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     <?php endif; ?>

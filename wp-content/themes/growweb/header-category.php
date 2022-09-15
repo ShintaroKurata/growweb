@@ -19,7 +19,7 @@
             <div class="main-header">
                         <!-- logo start -->
                         <div class="logo">
-                                <a href="">GROWWEB</a>
+                            <a href="<?php bloginfo('url'); ?>">GROWWEB</a>
                         </div>
                         <!-- logo end -->
 
