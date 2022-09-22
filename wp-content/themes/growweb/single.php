@@ -26,7 +26,7 @@
 
     <!-- contact section start -->
     <section class="contact-section">
-        <h2 class="section-title">お問い合わせ</h2>
+        <?php dynamic_sidebar('contact'); ?>
     </section>
     <!-- contact section end -->
 

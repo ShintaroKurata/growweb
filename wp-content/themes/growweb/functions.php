@@ -90,3 +90,13 @@ function create_post_type() {
  
 }
 add_action( 'init', 'create_post_type' );
+
+
+register_sidebar(array(
+    'name'=>'コンタクトエリア',
+    'id' => 'contact',
+    'before_widget' => '<div>',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+    ));
