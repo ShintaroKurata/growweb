@@ -1,6 +1,6 @@
 // #page-topをクリックした際の設定
-$('#page-top').click(function () {
-    $('body,html').animate({
+jQuery('#page-top').click(function () {
+  jQuery('body,html').animate({
         scrollTop: 0//ページトップまでスクロール
     }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
     return false;//リンク自体の無効化
@@ -8,20 +8,20 @@ $('#page-top').click(function () {
 
 
 // ハンバーガーメニュー
-$(function() {
-    $('.intro').addClass('go');
+jQuery(function() {
+  jQuery('.intro').addClass('go');
   
-    $('.reload').click(function() {
-      $('.intro').removeClass('go').delay(200).queue(function(next) {
-        $('.intro').addClass('go');
+  jQuery('.reload').click(function() {
+      jQuery('.intro').removeClass('go').delay(200).queue(function(next) {
+        jQuery('.intro').addClass('go');
         next();
       });
   
     });
   })
 
-  $(function () {
-    $('.js-btn').on('click', function () {        // js-btnクラスをクリックすると、
-      $('.header-navlist , .mb-btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+  jQuery(function () {
+    jQuery('.js-btn').on('click', function () {        // js-btnクラスをクリックすると、
+      jQuery('.menu , .mb-btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
     })
   });

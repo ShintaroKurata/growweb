@@ -3,7 +3,12 @@
         <div class="lead-inner">
             <!-- breadcrumb sectuon start -->
                 <section class="breadcrumb-section">
-
+                <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+                    <?php if(function_exists('bcn_display'))
+                    {
+                        bcn_display();
+                    }?>
+                </div>
                 </section>
             <!-- breadcrumb sectuon end -->
 

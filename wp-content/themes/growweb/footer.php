@@ -1,7 +1,9 @@
     <!-- page top -->
-    <div class="back">
-        <p id="page-top"><a href="#">Page Top</a></p>
-    </div>
+    <a href="#">
+        <div id="page-top" class="back">
+            <p>Page Top</p>
+        </div>
+    </a>
     <!-- page top end -->
 
     <footer>

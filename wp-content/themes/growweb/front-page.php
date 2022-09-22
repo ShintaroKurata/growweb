@@ -27,7 +27,7 @@
                                             ?>
                                         </div>
                                         <time class="release"><?php the_time('Y.m.d'); ?></time>
-                                        <p class="news-title"><?php echo get_the_title($post->ID); ?><p>
+                                        <div class="news-title"><?php echo get_the_title($post->ID); ?><div>
                                         
                                     </li>
                                     </a>
@@ -39,7 +39,7 @@
                 $category_id = get_cat_ID('お知らせ');
                 $category_link = get_category_link( $category_id );
                 ?>
-                <a href="<?php echo esc_url( $category_link ); ?>"><button class="btn2 news-button">View more</button></a>
+                <a class="btn-wrapper" href="<?php echo esc_url( $category_link ); ?>"><button class="btn2">View more</button></a>
         </section>
     <!-- news section end -->
 
@@ -81,44 +81,45 @@
     <!-- point section end -->
     <!-- works section start -->
         <section class="works-section">
-            <h2 class="section-title">制作事例</h2>
+            <h2 class="section-title">制作実績</h2>
             <ul class="works-grid">
                 <?php
                 $taxonomy_name = 'works'; // タクソノミーのスラッグ名を入れる
+
                 $args = array(
                     'posts_per_page'   => 3, 
+                    'post_type' => 'works',
                     'orderby'          => 'ID', 
                     'order'            => 'DESC',
                 );
 
-                $taxonomys = get_the_terms( $taxonomy_name,$args );
-
-                    foreach($taxonomys as $taxonomy):
-                     
-                ?>
-                <a href="<?php echo get_permalink($taxonomy->ID); ?>">
-                    <li class="works-content">
-                        <?php
-                        $thumbnail_id = get_post_thumbnail_id($taxonomy->ID);
-                        $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
-                        echo '<img src="$thumb_url[0]">';
-                        ?>
+                $cumtomPosts = get_posts( $args );
+                
+                    foreach($cumtomPosts as $post):
                         
-                        <div class="works-title"><p><?php echo get_the_title($taxonomy->ID); ?></p></div>
-                        <div class="works-tag"><i class="fa-solid fa-tags"></i><p>アパレル</p></div>
+                        setup_postdata( $post );
+                ?>
+                <a href="<?php echo get_permalink($post->ID); ?>">
+                    <li class="works-content">
+                        <div class="works-image">
+                            <?php if(has_post_thumbnail()): ?>
+                                <?php echo get_the_post_thumbnail($post->ID,'grid') ?>
+                            <?php else: ?>
+                                <img src="wp-content/themes/growweb/assets/images/business-hero.jpeg" alt="サムネイル">
+                            <?php endif; ?>
+                        </div>
+                        <div class="works-title"><p><?php echo get_the_title($post->ID); ?></p></div>
+                        <div class="works-tag"><i class="fa-solid fa-tags"></i><p><?php  $terms = get_the_terms($post->ID,'works_cat'); echo $terms[0]->name; ?></p></div>
                     </li>
-                </a>       
-
-            </ul>
-                    <?php
+                </a>     
+                <?php
                     endforeach;
-                    ?>
-            <?php
-            $category_id = get_cat_ID();
-            $category_link = get_category_link( $category_id );
-            ?>
+                    wp_reset_postdata();
+                ?>  
+            </ul>
+                    
 
-            <a href="<?php echo esc_url( $category_link ); ?>"><button class="btn2 works-button">View more</button></a>
+            <a class="btn-wrapper" href="<?php echo get_post_type_archive_link('works'); ?>"><button class="btn2">View more</button></a>
         </section>
     <!-- works section end -->
 

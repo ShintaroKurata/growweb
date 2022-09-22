@@ -4,10 +4,7 @@
             <section class="cover-section">
                 <div class="cover-text">
                     <h1>
-                        <?php
-                         $terms = get_terms( 'works_cat');
-                        echo $terms[0]->name;
-                        ?>
+                    <?php echo esc_html(get_post_type_object(get_post_type())->label); ?>
                     </h1>
                     <div class="cover-description">
                         <p>このページでは、GROW WEBのお知らせを一覧することができます。</p>

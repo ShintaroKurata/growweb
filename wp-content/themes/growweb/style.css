@@ -9,16 +9,32 @@ body{
     width:100%;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
     color:#ffffff;
 }
 
-.btn2 {
-    text-decoration: underline;
-    background-color: transparent;
-    border: none;
+.btn-wrapper {
+    display: block;
+    padding: 0 0 60px 0;
+}
 
+.btn2 {
+    padding: 5px 20px;
+    background-color: transparent;
+    border: 1.2px solid;
+    border-color: #333;
+    margin: 60px 0 40px 0;
+}
+
+.btn2:hover {
+    background-color: #333333;
+    color: #ffffff;
 }
 
 .section-title {
@@ -26,43 +42,6 @@ a {
     padding-bottom: 60px;
 }
 /* main */
-
-/* header */
-.header-wrapper {
-    height: 10vh;
-    background: rgba(0, 0, 0, 0.5);
-}
-.main-header {
-    position: fixed;
-    height: 10vh;
-    width:100%;
-    padding:0 40px;
-    display: flex;
-}
-
-.logo {
-    padding:20px;
-}
-
-.main-menu {
-   position: absolute;
-   right: 0px;
-}
-.main-menu ul {
-    display:flex;
-}
-.main-menu li {
-    list-style: none;
-    font-size: 14px;
-    padding:20px;
-}
-
-@media screen and (max-width: 768px){
-.main-header {
-    padding:0 20px;
-}
-
-}
 
 /* hero */
 .hero-section {
@@ -140,17 +119,18 @@ a {
 .cover-section {
     height:30vh;
     background: rgba(0, 0, 0, 0.5);
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
 }
 
 .cover-text {
-    padding: 15vh;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content:center;
     text-align: left;
-    width: 90%;
+    width: 70%;
 }
 
 .cover-text h1{
@@ -169,13 +149,9 @@ a {
 
 @media screen and (max-width: 768px){
     .cover-text {
-        padding: 11vh;
-        margin: 0 auto;
         display: block;
-        text-align: left;
-        width: 90%;
     }
-    .cover-text h2 {
+    .cover-text h1 {
         font-size: 16px;
         width: 100%;
         text-align: center;
@@ -183,7 +159,6 @@ a {
 
     .cover-description {
         width: 100%;
-        
     }
 
     .cover-text p {
@@ -195,7 +170,7 @@ a {
 
 /* news */
  .news-section{
-    height: 550px;
+    height: auto;
     width: 100%;
     text-align: center;
     background-color: #F7F7F7;
@@ -213,7 +188,6 @@ a {
     margin: 0 auto;
     width:60%;
     padding-left: 0px;
-    margin-bottom: 30px;
  }
 
  .news-section li{
@@ -234,10 +208,16 @@ a {
     color: #ffffff;
     border-radius: 10px;
     font-size: 10px;
+    min-width: 60px;
  }
 
  .news-title {
     margin: 0 0 0 30px;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
  }
  @media screen and (max-width: 768px){
     .news-list {
@@ -365,7 +345,7 @@ a {
 .works-section {
     background-color: #F7F7F7;
     width:100%;
-    height: 600px;
+    height: auto;
     text-align: center;
  }
 
@@ -376,13 +356,26 @@ a {
 
 .works-content {
     display: block;
+    width: 320px;
     height: auto;
     margin: 40px 10px 10px 10px;
 }
 
-.works-content img {
-    width: 300px;
-    height: 160px;
+.works-image {
+  cursor: pointer;
+  overflow: hidden;
+  height: 180px;
+
+}
+
+.works-image img {
+    width: 100%;
+    height: 100%;
+    transition: transform .6s ease;
+}
+
+.works-image img:hover {
+    transform: scale(1.1);
 }
 
 .works-content div {
@@ -392,6 +385,7 @@ a {
 .works-title {
     height: 30px;
     margin-top: 10px;
+    color:#333333
 }
 
 .works-tag {
@@ -408,12 +402,16 @@ a {
 @media screen and (max-width: 768px){
     .works-section {
         height: auto;
-        padding-bottom: 100px;
      }
     .works-grid {
         display: block;
-        justify-content: center;
+        padding: 0;
     }
+
+    .works-content {
+        margin: 40px auto;
+    }
+
     .works-title {
         width: 300px;
         margin: 0 auto;
@@ -603,47 +601,35 @@ a {
 
 
 /* scroll */
-/*スクロールダウン全体の場所*/
 .scrolldown4{
-    /*描画位置※位置は適宜調整してください*/
 	position:absolute;
 	bottom:1%;
 	right:50%;
-    /*矢印の動き1秒かけて永遠にループ*/
 	animation: arrowmove 1s ease-in-out infinite;
 }
-
-/*下からの距離が変化して全体が下→上→下に動く*/
 @keyframes arrowmove{
       0%{bottom:1%;}
       50%{bottom:3%;}
      100%{bottom:1%;}
  }
 
-/*Scrollテキストの描写*/
 .scrolldown4 span{
-    /*描画位置*/
 	position: absolute;
 	left:-20px;
 	bottom:10px;
-    /*テキストの形状*/
 	color: #eee;
 	font-size: 0.7rem;
 	letter-spacing: 0.05em;
-	/*縦書き設定*/
 	-ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
 }
 
-/* 矢印の描写 */
 .scrolldown4:before {
     content: "";
-    /*描画位置*/
     position: absolute;
     bottom: 0;
     right: -6px;
-    /*矢印の形状*/
     width: 1px;
     height: 20px;
     background: #eee;
@@ -652,11 +638,9 @@ a {
 
 .scrolldown4:after{
 	content:"";
-    /*描画位置*/
 	position: absolute;
 	bottom:0;
 	right:0;
-    /*矢印の形状*/
 	width:1px;
 	height: 50px;
 	background:#eee;
@@ -667,151 +651,17 @@ a {
     text-align: center;
     height: 40px;
     background-color: #89c6ff;
-    /* padding: 10px 0; */
 }
-#page-top a{
-    text-align: center;
-    color: #333333;
-    font-weight: 700;
+
+.back p {
     line-height: 40px;
-
 }
 
-.mb-btn{
-    display: none;
-    
-}
-
-@media screen and (max-width: 768px){
-/* ハンバーガーメニュー */
-.header {
-    font-size: 12px;
-    width: 100%;
-    justify-content: space-between;
-}
-.header-logo {
-    margin: 0 0 0 15px;
-}
-.header-navlist {
-    margin: 0;
-    top:10%;
-    margin-top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header-navitem > a {
-    display: block;
-    padding: 0px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: border-color .25s;
-}
-.header-navitem > a:hover {
-    border-bottom: 2px solid #fff;
-}
-
-.mb-btn{
-    display: block;
-    position: fixed;
-    border: none;
-    top: 15px;
-    right: 16px;
-  /* ボタンの大きさ  */
-    width: 48px;
-    height: 48px;
-  /* 最前面に */
-    z-index: 10;
-    background-color: transparent; 
-    
-}
-
-.mb-btn-line {
-    display: block;
-    position: relative;  /* バーガー線の位置基準として設定 */
-    width: 100%;  /* 線の長さと高さ */
-    height: 3px;
-    background-color: #fff;  /* バーガー線の色 */
-    transition: .2s;
-}
-
-.mb-btn-line::before,.mb-btn-line::after {
-content: "";
-position: absolute;
-width: 100%;
-height: 100%;
-background-color: #fff;
-transition: .5s;
-}
-.mb-btn-line::before {
-/* 上の線の位置 */
-transform: translate(-18px,-10px);
-}
-.mb-btn-line::after {
-/* 下の線の位置 */
-transform: translate(-18px,10px);
-}
-
-.header-navlist {
-    /* メニューの位置マイナス指定で画面外に */
-    position: fixed;
-    right: -70%;
-    width: 70%;
-    height: 80vh;
-    /* メニューを縦に */
-    display: flex;
-    flex-direction: column;
-    color: #efefef;
-    background-color: rgba(0, 0, 0, 0.45);
-    transition: .3s;
-  }
-
-.header-navitem {
-    position: relative;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header-navlist.open {
-    right: 0;
-  }
-
-/* .header-navitem {} */
-.header-navitem > a {
-    display: block;
-    padding: 5px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: border-color .25s;
-}
-.header-navitem > a:hover {
-    border-bottom: 2px solid #333;
-}
-.mb-btn-line.open {
-    background-color: transparent; 
-    transform: translateX(-16px); 	/* 真ん中の線を透明に */
-}
-.mb-btn-line.open::before ,
-.mb-btn-line.open::after {
-    content: "";
-    background-color: #fff;  /* 上下の線の色を変える */
-    transition: .2s;
-}
-.mb-btn-line.open::before {
-    transform: rotate(45deg);  /* 上の線を傾ける */
-}
-.mb-btn-line.open::after {
-    transform: rotate(-45deg);  /* 下の線を傾ける */
-}
-}
 
 /* category grid */
 .grid-section {
+    position: relative;
+    z-index: 1;
     width:100%;
     background-color: #F7F7F7;
     
@@ -830,12 +680,49 @@ transform: translate(-18px,10px);
 }
 
 .grid-item {
+    position: relative;
+    overflow: hidden;
     height: 400px;
     margin: 15px;
     background-color: #ffffff;
     box-shadow:
     -5px 5px 20px rgba(221, 229, 247, 0.2),
     5px -5px 20px rgba(8, 131, 161, 0.2)
+}
+
+.grid-item::before,
+.grid-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  margin: auto;
+  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  opacity: 0;
+}
+.grid-item::before {
+  background: rgba(211,229,247,.6);
+  width: 100%;
+  height: 100%;
+}
+.grid-item::after {
+  color: #fff;
+  content: "Read More";
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: end;
+  bottom: 20%;
+  right: 0;
+}
+ 
+.grid-item:hover::before,
+.grid-item:hover::after {
+  opacity: 1;
 }
 
 .grid-item:hover {
@@ -847,12 +734,15 @@ transform: translate(-18px,10px);
     height: 50%;
 }
 
-.blog-image img{
+
+.blog-image-area img {
     position: absolute;
     width: 100%;
-    height: 200px;
+    height: 100%;
     overflow: hidden;
+    object-fit: cover;
 }
+
 
 .blog-category {
     position: absolute;
@@ -1007,12 +897,7 @@ transform: translate(-18px,10px);
     .grid-item {
         height: 300px;
     }
-
-    .blog-image {
-        height: 150px;
-    }
 }
-
 
 /* blog */
 /* thumbnail */
@@ -1093,14 +978,23 @@ transform: translate(-18px,10px);
 
 
 @media screen and (max-width: 768px){
+    .thumbnail-section {
+        padding-top: 10vh;
+        padding-bottom: 5vh;
+    }
+
+    .thumbnail-wrapper {
+        width: 70%;
+        height: 50%;
+    }
+
     .thumbnail img {
-        width: 300px;
+        width: 100%;
         object-fit: contain;
     }
 
     .thumbnail-text {
         text-align: left;
-        width: 300px;
     }
     .thumbnail-text h1 {
         font-size: 16px;
@@ -1110,13 +1004,162 @@ transform: translate(-18px,10px);
 /* breadcrumb */
 .breadcrumb-section{
     height: 30px;
+    width: 100%;
+}
+.breadcrumbs {
+    margin: 15px auto 0;
+    width: 60%;
+}
+
+.breadcrumbs span {
+    font-size: 12px;
+}
+
+.breadcrumbs a {
+    color: #333;
+}
+
+.breadcrumbs a:hover {
+    color: #89c6ff;
 }
 
 .post-content {
     width: 60%;
-    margin: 40px auto;
+    margin: 15px auto 40px;
     text-align: left;
     padding:40px;
     border-radius: 10px;
     background-color: #F7F7F7;
+}
+
+.post-content a{
+    color: #333333;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+.post-content p {
+    font-size: 14px;
+}
+
+.more-content {
+    font-size: 14px;
+}
+}
+
+/* header */
+.header-wrapper {
+    height: 10vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+.main-header {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    width:100%;
+    padding:0 40px;
+    display: flex;
+}
+
+.logo {
+    padding:20px;
+}
+
+.main-menu {
+   position: fixed;
+   right: 0px;
+}
+.menu {
+    display:flex;
+}
+.menu-item {
+    list-style: none;
+    font-size: 14px;
+    padding:20px;
+}
+.mb-btn{
+    display: none;   
+}
+@media screen and (max-width: 768px){
+    .main-header {
+        padding:0 20px;
+    }
+    /* ハンバーガーメニュー */
+
+.main-menu {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+}
+.mb-btn{
+    display: block;
+    padding: 0;
+    position: absolute;
+    border: none;
+    z-index: 20;
+    right: 20px;
+    top: 10px;
+    height: 45px;
+    width: 40px;
+    background-color: transparent; 
+}
+
+.mb-btn-line,.mb-btn-line::before,.mb-btn-line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: .2s;
+}
+
+.mb-btn-line::before {
+transform: translate(0px,-10px);
+}
+.mb-btn-line::after {
+transform: translate(0px,10px);
+}
+.menu {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.45);
+    transition: .3s;
+}
+
+.menu.open {
+    display: block;
+    /* z-index: 19; */
+  }
+
+.menu-item a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color .25s;
+}
+.menu-item a:hover {
+    border-bottom: 2px solid #333;
+}
+.mb-btn-line.open {
+    background-color: transparent; 
+}
+.mb-btn-line.open::before ,
+.mb-btn-line.open::after {
+    content: "";
+    background-color: #fff;  
+    transition: .3s;
+}
+.mb-btn-line.open::before {
+    transform: rotate(45deg); 
+}
+.mb-btn-line.open::after {
+    transform: rotate(-45deg);
+}
 }

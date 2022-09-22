@@ -24,6 +24,8 @@ function get_main_title() {
         return $category_obj[0]->name;
     elseif(is_page()):
         return get_the_title();
+    elseif(is_category()):
+        return get_cat_title();
     endif;
 }
 
@@ -33,6 +35,7 @@ add_image_size('top',1077,622,true);
 add_image_size('detail',1100,330,true);
 add_image_size('post',630,420,true);
 add_image_size('search',168,168,true);
+add_image_size('grid',355,200,true);
 
 
 //カスタム投稿タイプ
@@ -58,7 +61,7 @@ function create_post_type() {
       'show_ui' => true, /* 管理画面にメニューを作る */
       'query_var' => true,
       'hierarchical' => false, /* 固定ページみたいに記事間の親子関係をつくる */
-      'supports' => array('title','editor','thumbnail'), /* 管理画面で登録できる項目 */
+      'supports' => array('title','editor','thumbnail','excerpt'), /* 管理画面で登録できる項目 */
       'menu_position' =>5, /* 管理画面のメニューの位置（5,10,15・・・） */
       'has_archive' => true, /* アーカイブページを持つ */
       'rewrite' => array( /* slug:スラッグ名　with_front:アーカイブページURLに/archive/をつける */
