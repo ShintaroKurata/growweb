@@ -78,7 +78,9 @@
                                 <span>
                                         <?php
                                         $category = the_category(); 
+                                        if(isset($category)){
                                         echo $category[0]->cat_name;
+                                        }
                                         ?>
                                 </span>
                             </div>

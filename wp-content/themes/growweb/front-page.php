@@ -48,10 +48,12 @@
             <h2 class="section-title">GROW WEBの強み</h2>
                     <!-- １つ目 -->
                     <div class="point-content">
-                        <div class="point-content-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/friend_mans_mono.png"></div>
+                        <div class="point-content-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/welldone.png">
+                        </div>
                         <div class="point-text">
                             <h3><span>01</span>プランから実装までを１人で完結</h3>
-                            <p>これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。</p>
+                            <p>貴社の専属のWEB担当がつくような形でのサービス提供が可能です。WEB制作から、その後の保守までサポートします。</p>
                         </div>
                     </div>
                     <!-- １つ目終わり -->
@@ -59,21 +61,21 @@
                     <!-- ２つ目 -->
                     <div class="point-content">
                         <div class="point-text point-reverse">
-                            <h3><span>02</span>プランから実装までを１人で完結</h3>
-                            <p>これはサンプルです。</p>
+                            <h3><span>02</span>ブログサイト化にも対応</h3>
+                            <p>安価なWEBサイトには、ブログ化に対応していないことがあります。私たちはWordPress対応のサイトも制作可能であるため、貴社のサイトを動的に更新させることができます。</p>
                         </div>
                         <div class="point-content-right">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/friend_mans_mono.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/analytics.png">
                         </div>
                     </div>
                     <!-- ２つ目終わり -->
 
                     <!-- ３つ目 -->
                     <div class="point-content">
-                        <div class="point-content-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/friend_mans_mono.png"></div>
+                        <div class="point-content-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/shopping.png"></div>
                         <div class="point-text">
-                            <h3><span>03</span>プランから実装までを１人で完結</h3>
-                            <p>これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。</p>
+                            <h3><span>03</span>集客までご提案可能</h3>
+                            <p>WEBサイトは作るだけではあまり意味を持ちません。集客ツールとして機能させるためのSEO戦略を提案できます。</p>
                         </div>
                     </div>
                     <!-- ３つ目終わり -->
@@ -128,11 +130,51 @@
         <div class="flow-cover">
             <h2 class="section-title">制作フロー</h2>
             <div class="flow-grid">
-                <div class="flow-content"><p>お問い合わせ</p></div>
-                <div class="flow-content"><p>ご連絡</p></div>
-                <div class="flow-content"><p>ご提案</p></div>
-                <div class="flow-content"><p>構築・開発</p></div>
-                <div class="flow-content"><p>納品</p></div>
+                <div class="flow-content">
+                    <div class="flow-content-wrapper">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mail.png">
+                        <div class="flow-description">
+                            <p class="flow-label">お問い合わせ</p>
+                            <p class="flow-text">お客さまよりお問い合わせフォームからご連絡をいただきます。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-content">
+                    <div class="flow-content-wrapper">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/reply.png">
+                        <div class="flow-description">
+                            <p class="flow-label">ご連絡</p>
+                            <p class="flow-text">担当者より３営業日以内に回答いたします。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-content">
+                    <div class="flow-content-wrapper">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/document.png">
+                        <div class="flow-description">
+                            <p class="flow-label">ご提案</p>
+                            <p class="flow-text">打ち合わせ時にお客様に合わせてご提案をいたします。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-content">
+                    <div class="flow-content-wrapper">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/construct.png">
+                        <div class="flow-description">
+                            <p class="flow-label">構築・開発</p>
+                            <p class="flow-text">実際にWEBサイトを構築・開発いたします。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-content">
+                    <div class="flow-content-wrapper">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/website.png">
+                        <div class="flow-description">
+                            <p class="flow-label">納品</p>
+                            <p class="flow-text">発注日より約１ヶ月以内に納品のご連絡を差し上げます。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -179,7 +221,7 @@
     <!-- faqs section end -->
 
     <!-- contact section start -->
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
         <?php dynamic_sidebar('contact'); ?>
     </section>
     <!-- contact section end -->
