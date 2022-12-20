@@ -10,13 +10,13 @@
                             </div>
 
                             <div class="contact-button">
-                                <a href="#contact">
+                                <a href="/contact">
                                     <button class="hero-button">お問い合わせはこちら</button>
                                     <span class="btn-circle-triangle"></span>
                                 </a>
                             </div>
                         </div>
-                        <div class="scrolldown4"><span>Scroll</span></div>
+                        <div class="scrolldown"><span></span></div>
                 </section>
             </div>
         <?php else: ?>
@@ -121,7 +121,7 @@
                         <div class="point-text">
                             <h3>Webデザイン</h3>
                             <p class="business-en">Web Design</p>
-                            <p>GROWWEBのWebデザインはSEOコンサルタントが担当します。単なる見た目の施しに終始せず、ユーザーと検索エンジンの両方に最適化したWebサイトを設計・開発します。</p>
+                            <p class="business-desc">GROWWEBのWebデザインはSEOコンサルタントが担当します。単なる見た目の施しに終始せず、ユーザーと検索エンジンの両方に最適化したWebサイトを設計・開発します。</p>
                         </div>
                     </div>
                     <!-- １つ目終わり -->
@@ -131,7 +131,7 @@
                         <div class="point-text point-reverse">
                             <h3>SEOコンサルティング</h3>
                             <p class="business-en">SEO Consulting</p>
-                            <p>GROWWEBのWebデザインはSEOコンサルタントが担当します。単なる見た目の施しに終始せず、ユーザーと検索エンジンの両方に最適化したWebサイトを設計できます。</p>
+                            <p class="business-desc">複数のメディア運営経験で裏付けされたSEO知識をもって、貴社メディアの検索エンジンにおける順位向上のサポートをします。戦略部分の上流から、記事執筆の下流までのトータルで対応可能です。</p>
                         </div>
                         <div class="point-content-right">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/web-consulting-sample.jpeg">
@@ -145,7 +145,7 @@
                         <div class="point-text">
                             <h3>メディア運営</h3>
                             <p class="business-en">Media</p>
-                            <p>GROWWEBは、中小企業の事業拡大に寄与することを目的に運営されています。メディア事業では、求職者やWeb担当者の困り事を解決するポータルとしてコンテンツを提供しています。</p>
+                            <p class="business-desc">GROWWEBは、中小企業の事業拡大に寄与することを目的に運営されています。メディア事業では、求職者やWeb担当者の困り事を解決するポータルとしてコンテンツを提供しています。</p>
                         </div>
                     </div>
                     <!-- ３つ目終わり -->
@@ -204,21 +204,27 @@
     <!-- flow section start -->
     <section class="flow-section">
         <div class="flow-cover">
-            <h2 class="section-title">Web Design FLow</h2>
+            <h2 class="section-title">Web Design Flow</h2>
             <div class="flow-grid">
                 <div class="flow-content">
                     <div class="flow-content-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mail.png">
+                        <div class="flow-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mail.png">
+                        </div>
+                        <p class="flow-num">1</p> 
                         <div class="flow-description">
-                            <p class="flow-label">フォームからお問い合わせ</p>
+                            <p class="flow-label">フォームからお申し込み</p>
                             <p class="flow-text">当サイトのお問い合わせフォームよりご連絡ください。担当者よりご連絡いたします。</p>
                         </div>
                     </div>
                 </div>
                 <div class="flow-content">
                     <div class="flow-content-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/reply.png">
-                        <div class="flow-description">
+                        <div class="flow-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/reply.png">
+                        </div>
+                        <p class="flow-num">2</p>
+                        <div class="flow-description"> 
                             <p class="flow-label">無料でお見積もり・相談</p>
                             <p class="flow-text">無料お見積り・相談を承っております。デザインやサイトに求める機能の実装にかかる費用を予めご確認いただけます。</p>
                         </div>
@@ -226,8 +232,11 @@
                 </div>
                 <div class="flow-content">
                     <div class="flow-content-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/document.png">
-                        <div class="flow-description">
+                        <div class="flow-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/document.png">
+                        </div>
+                        <p class="flow-num">3</p>
+                        <div class="flow-description"> 
                             <p class="flow-label">ご契約</p>
                             <p class="flow-text">打ち合わせ時にお客様に合わせてご提案をいたします。</p>
                         </div>
@@ -235,17 +244,23 @@
                 </div>
                 <div class="flow-content">
                     <div class="flow-content-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/construct.png">
-                        <div class="flow-description">
+                        <div class="flow-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/construct.png">
+                        </div>
+                        <p class="flow-num">4</p>
+                        <div class="flow-description">                             
                             <p class="flow-label">構築・開発</p>
                             <p class="flow-text">実際にWEBサイトを構築・開発いたします。</p>
                         </div>
                     </div>
                 </div>
-                <div class="flow-content">
+                <div class="flow-content flow-content-last">
                     <div class="flow-content-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/website.png">
-                        <div class="flow-description">
+                        <div class="flow-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/website.png">
+                        </div>
+                        <p class="flow-num">5</p>
+                        <div class="flow-description"> 
                             <p class="flow-label">納品</p>
                             <p class="flow-text">発注日より約１ヶ月以内に納品のご連絡を差し上げます。</p>
                         </div>
@@ -262,44 +277,67 @@
         <div class="faqs-grid">
             <div class="faqs-content">
                 <div class="faqs-title">
-                    <i class="fa-solid fa-circle-question"></i>&nbsp;質問<br>
-                    <p>サイト納品後の使い方がわかりません。</p>
+                    <div class="faqs-title-icon">
+                        <span>Q</span>
+                    </div>
+                    <p>情報の管理体制はどうなっていますか？</p>
                 </div>
                 <div class="faqs-answer">
-                    <i class="fa-regular fa-face-smile"></i>&nbsp;回答<br>
-                    <p>納品時に、簡単なサイトの使い方をお教えします。その際に、外部サイトも含めたおすすめの記事や本などもご紹介いたしますので、ご安心ください。</p>
+                    <div class="faqs-answer-icon">
+                        <span>A</span>
+                    </div>
+                    <p>ご利用時にNDAを含むご契約を結ばせていただいております。業務上知り得た情報は、作業の範囲内でのみ利用させていただきます。</p>
                 </div>
             </div>
 
             <div class="faqs-content">
                 <div class="faqs-title">
-                    <i class="fa-solid fa-circle-question"></i>&nbsp;質問
+                    <div class="faqs-title-icon">
+                        <span>Q</span>
+                    </div>
                     <p>サイト保守契約を別途結ぶ必要はありますか？</p>
                 </div>
                 <div class="faqs-answer">
-                    <i class="fa-regular fa-face-smile"></i>&nbsp;回答<br>
-                    <p>別の会社を利用される場合や、ご自身で保守が可能な場合などは、保守契約を結ぶ必要はありません。WEBサイト（HP）は、定期的にメンテナンスをしないと、バグが起きる可能性がありますので、いずれにしろ保守は必要です。</p>
+                    <div class="faqs-answer-icon">
+                        <span>A</span>
+                    </div>
+                    <p>別途運用に関するプランがございますので、必要に応じてご利用いただけます。もちろんご自身で保守運用をすることも可能です。</p>
                 </div>
             </div>
 
-            <div class="faqs-content">
+            <div class="faqs-content faqs-content-end">
                 <div class="faqs-title">
-                <i class="fa-solid fa-circle-question"></i>&nbsp;質問
-                <p>なぜ料金が安いのですか？質は大丈夫ですか？</p>
+                    <div class="faqs-title-icon">
+                        <span>Q</span>
+                    </div>
+                    <p>サイトの一部だけの改修・作成なども対応可能ですか？</p>
                 </div>
                 <div class="faqs-answer">
-                    <i class="fa-regular fa-face-smile"></i>&nbsp;回答
-                <p>料金が安い理由は、営業・ディレクション・構築・納品を少人数で行なっており、コストがかからないからです。質に関しては、満足できない場合は返金可能ですので、納品時に判断してください。ディレクションと構築が同じ人であり、齟齬が生じないため、「発注時と出来上がりが違う」といった問題はありません。</p>
+                    <div class="faqs-answer-icon">
+                        <span>A</span>
+                    </div>
+                <p>はい。サイトの新規制作以外の要望につきましても対応可能です。詳しい内容につきましては、お問い合わせ時にお見積もり等させていただきます。</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- faqs section end -->
-
-    <!-- contact section start -->
-    <section id="contact" class="contact-section">
-        <?php dynamic_sidebar('contact'); ?>
+    <!-- cta section start -->
+    <section class="cta-section">
+        <div class="cta-desc">
+            <p class="cta-copy">まずはご相談ください。</p>
+            <p class="cta-text">無料相談・無料お見積りを承っておりますので、お気軽にお問い合わせください。</p>
+            <div>
+                <a href="/contact">
+                <button class="cta-button mt-20">
+                    お問い合わせはこちら
+                </button>
+                </a>
+            </div>
+        </div>
+        <div class="cta-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone-sample.svg">
+        </div>
     </section>
-    <!-- contact section end -->
-
+    <!-- cta section end -->
 <?php get_footer(); ?>
