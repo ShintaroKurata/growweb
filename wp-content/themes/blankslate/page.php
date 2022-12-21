@@ -3,15 +3,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="header">
         <h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>
-        <div class="post-meta-area">
-            <div class="post-tag">
-                <ul class="post-meta list-inline">
-                    <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>">
-                    <?php the_time('Y.m.d');?>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <?php edit_post_link(); ?>
     </header>
     <div class="entry-content" itemprop="mainContentOfPage">

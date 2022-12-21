@@ -1243,7 +1243,6 @@ article p {
     height: auto;
     align-items: center;
     padding-bottom: 12px;
-    border-bottom: 0.5px solid #333333;
 }
 
 .post-meta-area li {
@@ -1266,6 +1265,11 @@ article p {
 
 .post-meta,.post-meta-comment {
     margin: 0;
+}
+
+.entry-content {
+    padding-top: 12px;
+    border-top: 0.5px solid #333333;
 }
 
 
