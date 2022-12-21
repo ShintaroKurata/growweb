@@ -121,7 +121,7 @@
                         <div class="point-text">
                             <h3>Webデザイン</h3>
                             <p class="business-en">Web Design</p>
-                            <p class="business-desc">GROWWEBのWebデザインはSEOコンサルタントが担当します。単なる見た目の施しに終始せず、ユーザーと検索エンジンの両方に最適化したWebサイトを設計・開発します。</p>
+                            <p class="business-desc">GROWWEBのWebデザインはSEO検定１級取得者のコンサルタントが担当します。単なる見た目の施しに終始せず、ユーザーと検索エンジンの両方に最適化したWebサイトを設計・開発します。</p>
                         </div>
                     </div>
                     <!-- １つ目終わり -->
@@ -131,7 +131,7 @@
                         <div class="point-text point-reverse">
                             <h3>SEOコンサルティング</h3>
                             <p class="business-en">SEO Consulting</p>
-                            <p class="business-desc">複数のメディア運営経験で裏付けされたSEO知識をもって、貴社メディアの検索エンジンにおける順位向上のサポートをします。戦略部分の上流から、記事執筆の下流までのトータルで対応可能です。</p>
+                            <p class="business-desc">複数のメディア運営経験で裏打ちされたSEO知識をもって、貴社メディアの検索エンジンにおける順位向上のサポートをします。戦略部分の上流から、記事執筆の下流までのトータルで対応可能です。</p>
                         </div>
                         <div class="point-content-right">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/web-consulting-sample.jpeg">

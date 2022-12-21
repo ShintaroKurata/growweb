@@ -35,6 +35,7 @@ wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
 wp_enqueue_style("destyle",get_template_directory_uri(). '/assets/css/destyle.css',array());
 wp_enqueue_script('style_fontawesome', 'https://kit.fontawesome.com/c6a7963f91.js',array());
 wp_enqueue_script( 'jquery' );
+wp_enqueue_script("script_js",get_template_directory_uri(). '/assets/js/script.js',array(),'');
 }
 add_action( 'wp_footer', 'blankslate_footer' );
 function blankslate_footer() {

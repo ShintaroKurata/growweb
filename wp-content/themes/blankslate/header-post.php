@@ -16,7 +16,7 @@
     <div id="wrapper" class="hfeed">
         <header id="header" class="site-header" role="banner">
             <div id="branding">
-                <div id="site-title" class="post-site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                <div class="post-site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                 <?php
                 if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; }
                 echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
@@ -24,7 +24,7 @@
                 ?>
                 </div>
             </div>
-            <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <nav id="menu" class="post-menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
             </nav>
             <button type="button" class="mb-btn js-btn">

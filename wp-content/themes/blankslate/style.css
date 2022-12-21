@@ -1210,52 +1210,40 @@ input,textarea {
     }
 }
 
-/* blog */
-/* thumbnail */
-.thumbnail-back-ground {
-    height: auto;
-    background-image: url("assets/images/business-hero.jpeg");
-    background-size:cover;
-}
+/* page & post */
+/* header */
 
-.thumbnail-section {
+article {
+    position: relative;
+    width: 80%;
     height: auto;
-    background: rgba(0, 0, 0, 0.5);
-    display: block;
-    width: 100%;
-    padding-top: 20vh;
-    padding-bottom: 5vh;
-}
-
-.thumbnail-wrapper {
-    width: 600px;
     margin: 0 auto;
+    padding:10% 0;
 }
 
-.thumbnail {
-    text-align: center;
+article p {
+    color: #121213;
+    font-size: 0.9rem;
+    letter-spacing: .1em;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
-
-.thumbnail img {
-    width: 600px;
-    object-fit: contain;
-}
-
-.thumbnail-text h1{
-    margin-top: 10px;
-    color: #ffffff;
+.entry-title {
+    padding: 0 0 8px 0;
+    color: #333333;
     text-align: left;
-    font-size: 28px;
+    font-size: 38px;
     width: 100%;
 }
 
 .post-meta-area {
-    color: #FFFFFF;
     display: flex;
-    font-size: 12px;
+    font-size: 20px;
     height: auto;
     align-items: center;
-    padding: 5px 0;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid #333333;
 }
 
 .post-meta-area li {
@@ -1264,23 +1252,16 @@ input,textarea {
 
 .cat-name {
     width: auto;
-    text-align: left;
+    text-align: center;
     padding: 5px 20px;
-    background-color: #0B254B;
-    border-radius: 10px;
-    color: #ffffff;
-}
-
-.cat-name span ul {
-    padding: 0;
-    margin: 0;
+    border: 0.5px solid #333;
+    color: #333;
 }
 
 .post-tag {
     display: flex;
     text-align: left;
     align-items: center;
-    margin-left: 20px;
 }
 
 .post-meta,.post-meta-comment {
@@ -1359,22 +1340,29 @@ input,textarea {
 }
 
 /* header */
-.header-wrapper {
-    height: 10vh;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-#header {
+.site-header {
     position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    z-index: 10;
 }
 
 #site-title {
     font-size: 20px;
     padding:20px;
     color: #ffffff;
+}
+
+.post-site-title {
+    font-size: 20px;
+    padding:20px;
+    color: #0B254B;
+
+}
+
+.post-menu ul {
+    color: #0B254B;
 }
 
 .menu{
@@ -1387,11 +1375,12 @@ input,textarea {
     font-size: 14px;
     padding:20px;
 }
+
 .mb-btn{
     display: none;   
 }
 @media screen and (max-width: 768px){
-    #header {
+    .site-header {
         padding:0 20px;
     }
 
@@ -1399,12 +1388,6 @@ input,textarea {
         font-size:14px;
     }
 /* ハンバーガーメニュー */
-
-.main-menu {
-    position: absolute;
-    width: 70%;
-    height: 100%;
-}
 .mb-btn{
     display: block;
     padding: 0;
@@ -1434,6 +1417,7 @@ transform: translate(0px,-10px);
 .mb-btn-line::after {
 transform: translate(0px,10px);
 }
+
 .menu {
     position: fixed;
     width: 70%;
@@ -1447,8 +1431,7 @@ transform: translate(0px,10px);
 
 .menu.open {
     display: block;
-    /* z-index: 19; */
-  }
+}
 
 .menu-item a {
     display: block;
