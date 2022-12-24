@@ -1222,9 +1222,10 @@ article p {
     margin-bottom: 30px;
 }
 
-.post-type-archive-works main,.category-news main {
+.page main,.post-type-archive-works main,.category-news main {
     width: 100%;
     height: fit-content;
+    min-height: 100vh;
     padding-bottom: 10%;
 }
 
