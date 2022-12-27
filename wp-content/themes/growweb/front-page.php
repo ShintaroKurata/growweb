@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header("front"); ?>
     <!-- hero section start-->
     <?php if(is_front_page() ): ?>
             <div class="hero-back-ground">

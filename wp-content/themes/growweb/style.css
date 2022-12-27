@@ -12,23 +12,70 @@ growweb WordPress Theme © 2023 GROWWEB
 growweb is distributed under the terms of the GNU GPL
 */
 @charset "utf-8";
+
+
+
+/* 
+1.共通
+    1-1.body,main,sidebar,container
+    1-2.header
+        1-2-1.header-front
+        1-2-2.header-page
+        1-2-3.header-post
+    1-3.footer
+        1-3-1.footer-works
+    1-4.button
+    1-5.input,textarea
+2.front-page
+    2-1.hero
+    2-2.cover
+    2-3.news
+    2-4.point
+    2-5.works
+    2-6.flow
+    2-7.faqs
+    2-8.cta
+3.category
+    3-1.entry
+        3-1-1.entry-meta
+    3-2.entry-post
+        3-2-1.entry-post-meta
+    3-3.entry-content
+4.archive
+    4-1.entry-works
+    4-2.entry-post-works
+    4-3.entry-content-works
+    4-4.entry-footer
+4.page
+5.single
+6.single-works
+ */
+
+
+
 body{
     font-family: 'Belleza','Noto Sans JP', sans-serif;
     width:100%;
     color: #333333;
 }
 
-main,aside {
+#content,#sidebar {
     margin: 10% 0 0 0;
 }
 
-main {
-    width: 80%;
+#content {
+    width: 70%;
 }
 
-aside {
-    width: 20%;
+.page-content {
+    margin: 10% 0 0 0;
 }
+
+#sidebar {
+    width: 30%;
+    padding: 30px 10% 0 0;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -115,9 +162,6 @@ input,textarea {
     }
 }
 
-#sidebar {
-    width: 20%;
-}
 /* hero */
 .hero-section {
     height:100vh;

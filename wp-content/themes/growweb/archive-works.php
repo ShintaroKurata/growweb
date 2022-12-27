@@ -1,4 +1,4 @@
-<?php get_header("post"); ?>
+<?php get_header("page"); ?>
 <header class="header archive-header">
     <h1 class="archive-works-title" itemprop="name">Works</h1>
     <div class="archive-meta archive-works-meta" itemprop="description">
