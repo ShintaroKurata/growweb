@@ -1,11 +1,13 @@
 <div class="entry-content-works" itemprop="mainEntityOfPage">
     <?php if ( has_post_thumbnail() ) : ?>
-        <a href="<?php the_post_thumbnail_url( 'full' ); ?>" title="<?php $attachment_id = get_post_thumbnail_id( $post->ID ); the_title_attribute( array( 'post' => get_post( $attachment_id ) ) ); ?>">
-            <?php the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) ); ?>
-        </a>
+        <div class="works-thumbnail">
+            <a href="<?php the_post_thumbnail_url( 'full' ); ?>" title="<?php $attachment_id = get_post_thumbnail_id( $post->ID ); the_title_attribute( array( 'post' => get_post( $attachment_id ) ) ); ?>">
+                <?php the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) ); ?>
+            </a>
+        </div>
     <?php endif; ?>
     <meta itemprop="description" content="<?php echo esc_html( wp_strip_all_tags( get_the_excerpt(), true ) ); ?>" />
-        <section class="post-content" itemprop="text">
+        <section class="post-works-content" itemprop="text">
             <?php the_content(); ?>
         </section>
     <div class="entry-links"><?php wp_link_pages(); ?></div>

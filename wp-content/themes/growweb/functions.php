@@ -4,6 +4,7 @@ function growweb_setup() {
 load_theme_textdomain( 'growweb', get_template_directory() . '/languages' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-formats', array( 'image', 'gallery' ) );
 add_theme_support( 'responsive-embeds' );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'html5', array( 'search-form', 'navigation-widgets' ) );
@@ -195,7 +196,8 @@ function create_post_type() {
         'show_ui' => true, /* 管理画面にメニューを作る */
         'query_var' => true,
         'hierarchical' => false, /* 固定ページみたいに記事間の親子関係をつくる */
-        'supports' => array('title','editor','thumbnail','excerpt'), /* 管理画面で登録できる項目 */
+        'supports' => array('title','editor','author','post-formats','thumbnail','excerpt','revisions'), /* 管理画面で登録できる項目 */
+        'show_in_rest' => true,
         'menu_position' =>5, /* 管理画面のメニューの位置（5,10,15・・・） */
         'has_archive' => true, /* アーカイブページを持つ */
         'rewrite' => array( /* slug:スラッグ名　with_front:アーカイブページURLに/archive/をつける */

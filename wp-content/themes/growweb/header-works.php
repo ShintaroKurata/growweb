@@ -32,4 +32,4 @@
             </button>
         </header>
     <div id="container" class="two-column">
-    <main class="page-content" role="main">
+    <main id="works-main" role="main">

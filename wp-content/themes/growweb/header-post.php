@@ -31,5 +31,5 @@
                     <span class="mb-btn-line"></span>
             </button>
         </header>
-    <div id="container">
+    <div id="container" class="two-column">
     <main id="content" role="main">

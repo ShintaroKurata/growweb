@@ -322,22 +322,4 @@
         </div>
     </section>
     <!-- faqs section end -->
-    <!-- cta section start -->
-    <section class="cta-section">
-        <div class="cta-desc">
-            <p class="cta-copy">まずはご相談ください。</p>
-            <p class="cta-text">無料相談・無料お見積りを承っておりますので、お気軽にお問い合わせください。</p>
-            <div>
-                <a href="/contact">
-                <button class="cta-button mt-20">
-                    お問い合わせはこちら
-                </button>
-                </a>
-            </div>
-        </div>
-        <div class="cta-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone-sample.svg">
-        </div>
-    </section>
-    <!-- cta section end -->
 <?php get_footer(); ?>
