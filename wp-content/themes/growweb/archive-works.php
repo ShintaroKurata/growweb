@@ -1,6 +1,6 @@
 <?php get_header("page"); ?>
 <header class="header archive-header">
-    <h1 class="archive-works-title" itemprop="name">Works</h1>
+    <h1 class="archive-works-title" itemprop="name">WORKS</h1>
     <div class="archive-meta archive-works-meta" itemprop="description">
         <p>お客様とのウェブ制作に関する契約上、実績の一部のみ公開しております。<br>その他の制作実績についてはお問い合わせよりご依頼いただければ個別に対応いたします。</p>
     </div>

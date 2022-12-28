@@ -7,9 +7,14 @@
             <?php else: ?>
             <?php endif; ?>
         </span>
-    <div>
+    </div>
     <div class="tag-links">
-        <span class="tag-links-item"><?php the_tags(); ?></span>
+        <span class="tag-links-item">
+            <?php if (has_term('','works_tag' )):?>
+                <?php echo get_the_term_list($post->ID, 'works_tag',' ＃','</span><span class="tag-links-item"> ＃',''); ?>
+            <?php else: ?>
+            <?php endif; ?>
+        </span>
     </div>
     <?php if ( is_single() ) { echo '<meta itemprop="dateModified" content="' . esc_attr( get_the_modified_date() ) . '" />'; } ?>
 </div>

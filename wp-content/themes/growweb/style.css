@@ -1370,8 +1370,15 @@ input,textarea {
 
 .entry-works-meta {
     display: flex;
+    align-items: center;
+    height: fit-content;
     font-size: 0.9rem;
     margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+#works-main .cat-links,#works-main .tag-links {
+    display: flex;
 }
 
 .single-post .entry-meta {
@@ -1381,8 +1388,9 @@ input,textarea {
 }
 
 .cat-links-item {
+    display: block;
     width: auto;
-    height: auto;
+    height: 100%;
     text-align: center;
     padding: 5px 15px;
     border: 0.5px solid #333;
@@ -1392,8 +1400,9 @@ input,textarea {
 }
 
 .tag-links-item {
+    display: block;
     width: auto;
-    height: auto;
+    height: 100%;
     text-align: center;
     padding: 5px 15px;
     margin-left: 8px;

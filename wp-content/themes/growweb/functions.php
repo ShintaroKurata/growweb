@@ -179,7 +179,7 @@ function create_post_type() {
     register_post_type( 'works', /* カスタム投稿タイプスラッグ */
       array(
         'labels' => array( /* 表示させる文字 */
-          'name' => 'Works',
+          'name' => 'WORKS',
           'singular_name' => '制作実績',
           'all_items' => '制作実績一覧',
           'add_new' => '制作実績の追加',
@@ -220,6 +220,7 @@ function create_post_type() {
               'new_item_name' => '名前',
           ),
           'show_ui' => true, /* 管理画面にメニューを作る */
+          'show_in_rest'      => true, 
           'rewrite' => array(
               'slug' => 'works-category','with_front' => true,'hierarchical' => true)
       ));
@@ -237,6 +238,7 @@ function create_post_type() {
             'new_item_name' => '名前',
         ),
         'show_ui' => true, /* 管理画面にメニューを作る */
+        'show_in_rest'      => true, 
         'rewrite' => array(
             'slug' => 'works-tag','with_front' => true,'hierarchical' => false)
     ));
