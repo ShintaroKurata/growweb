@@ -63,7 +63,11 @@ body{
     margin: 10% 0 0 0;
 }
 
-#content,#works-main {
+#content {
+    width: 100%;
+}
+
+#works-main {
     width: 70%;
 }
 
@@ -794,6 +798,7 @@ input,textarea {
 
  .faqs-answer {
     display: flex;
+    align-items: center;
     margin-top: 25px;
  }
 
@@ -1272,7 +1277,7 @@ input,textarea {
 
 /* page & post */
 /* header */
-article {
+.type-post,.type-page {
     position: relative;
     width: 80%;
     height: auto;
@@ -1280,7 +1285,7 @@ article {
     padding:0 0 10% 0;
 }
 
-article p {
+.type-post p,.type-page p {
     color: #121213;
     font-size: 0.9rem;
     letter-spacing: .1em;
@@ -1289,7 +1294,7 @@ article p {
     margin-bottom: 30px;
 }
 
-.page main,.post-type-archive-works main,.category-news main {
+.single main,.page main,.post-type-archive-works main,.category-news main {
     width: 100%;
     height: fit-content;
     min-height: 100vh;
@@ -1318,7 +1323,12 @@ article p {
     border-bottom: 0.4px solid #333;
 }
 
-.grid-section .entry-title,.category-news .entry-title {
+.grid-section .entry-title {
+    font-size: 0.9rem;
+    margin: 8px 0 0 0;
+}
+
+.category-news .entry-title {
     font-size: 1rem;
     margin: 8px 0 0 0;
 }
@@ -1329,6 +1339,7 @@ article p {
     text-align: left;
     font-size: 38px;
     width: 100%;
+    font-weight: 600;
 }
 
 .single-works .entry-title {
@@ -1422,6 +1433,11 @@ article p {
 }
 
 .post-works-content p {
+    color: #333;
+    font-size: 0.9rem;
+    letter-spacing: .1em;
+    line-height: 1.5;
+    margin-bottom: 30px;
     font-weight: 400;
 }
 
@@ -1439,7 +1455,6 @@ article p {
 }
 
 .wp-block-column {
-    margin: 0 10px 0 0;
     border-bottom: 0.8px solid #888888;
 }
 
@@ -1454,6 +1469,31 @@ article p {
 .nav-links {
     padding:0 0 10% 0;
     margin-left: 10%;
+}
+
+.entry-footer {
+    padding: 2%;
+}
+
+.entry-footer h2 {
+    font-weight: 500;
+    width: fit-content;
+    padding: 0.5em;
+    margin: 3em 0 14px 0;
+    border: 0.5px solid #211A18;
+}
+
+.entry-footer-contact {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: linear-gradient(to bottom right,rgba(11,37,75,1),rgba(57,76,107,0.7));
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.entry-footer-contact i {
+    margin: 0 1rem;
 }
 
 @media screen and (max-width: 768px){
@@ -1550,7 +1590,7 @@ article p {
 .post-site-title {
     font-size: 20px;
     padding:20px;
-    color: #0B254B;
+    color: #333333;
 
 }
 
@@ -1690,7 +1730,7 @@ transform: translate(0px,10px);
  }
 
  /* works */
- .works {
+ #works-main article {
     width : 100%;
     padding: 0 0 10% 10%;
  }
@@ -1712,4 +1752,17 @@ transform: translate(0px,10px);
     width: 100%;
     height: auto;
     }
+ }
+
+
+ /* widget */
+
+ .widget-area h2 {
+    font-size: 1.2rem;    
+    padding: 8px 0;
+    margin-bottom: 8px;
+    border-bottom: 0.7px solid #333;
+    font-weight: 500;
+
+
  }
