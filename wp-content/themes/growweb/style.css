@@ -57,7 +57,8 @@ growweb is distributed under the terms of the GNU GPL
     5-0,page,single共通
 6.single
 7.single-works
-8.各種パーツ
+8.404
+9.各種パーツ
     breadcrumb
     ハンバーガーメニュー
     widget
@@ -117,6 +118,22 @@ body{
 .two-column {
     display: flex;
     background-color: #f8f8f8;
+}
+
+input[type="search"] {
+    background-color: #ffffff;
+    padding: 0.7rem;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    border: 0.7px solid #333333;
+}
+
+input[type="submit"] {
+    background-color: #0B254B;
+    color: #ffffff;
+    padding: 0.7rem;
+    border-radius: 10px;
+
 }
 
 @media screen and (max-width: 768px){
@@ -1459,7 +1476,7 @@ input,textarea {
 /* 4-5.taxonomy-archive */
 .taxonomy {
     height: fit-content;
-    padding-bottom: 40px;
+    padding-bottom: 4rem;
 }
 
 /* --------------------------------
@@ -1518,7 +1535,26 @@ input,textarea {
 }
 
 /* --------------------------------
-            8.各種パーツ
+            8.404
+-------------------------------- */
+.not-found .entry-title{
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    
+}
+
+.not-found div{
+    margin: 0 auto;
+    width: 80%;
+}
+.not-found .entry-content {
+    padding: 0 0 2rem 0;
+}
+.not-found-text {
+    padding: 2rem 0;
+}
+/* --------------------------------
+            9.各種パーツ
 -------------------------------- */
 /* breadcrumb */
 .breadcrumb-section{
