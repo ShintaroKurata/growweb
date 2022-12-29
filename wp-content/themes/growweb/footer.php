@@ -32,7 +32,7 @@
         </nav> 
     </div>
     <div id="copyright">
-    &copy; <?php echo esc_html( date_i18n( __( 'Y', 'growweb' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+        &copy; <?php echo esc_html( date_i18n( __( 'Y', 'growweb' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
     </div>
 </footer>
 </div>

@@ -1,63 +1,22 @@
 <?php get_header("front"); ?>
     <!-- hero section start-->
-    <?php if(is_front_page() ): ?>
-            <div class="hero-back-ground">
-                <section class="hero-section">
-                        <div class="hero-text">
-                            <h2>We put yours into orbit.</h2>
-                            <div class="hero-description">
-                                <p>私たちが目指すのは、価値あるものが適切に評価されるような仕組みづくりです。<br>あなたのサービスの認知がまだ少ないなら、その後押しを、私たちがWebを用いて支援します。</p>
-                            </div>
-
-                            <div class="contact-button">
-                                <a href="/contact">
-                                    <button class="hero-button">お問い合わせはこちら</button>
-                                    <span class="btn-circle-triangle"></span>
-                                </a>
-                            </div>
+        <div class="hero-back-ground">
+            <section class="hero-section">
+                    <div class="hero-text">
+                        <h2>We put yours into orbit.</h2>
+                        <div class="hero-description">
+                            <p>私たちが目指すのは、価値あるものが適切に評価されるような仕組みづくりです。<br>あなたのサービスの認知がまだ少ないなら、その後押しを、私たちがWebを用いて支援します。</p>
                         </div>
-                        <div class="scrolldown"><span></span></div>
-                </section>
-            </div>
-        <?php else: ?>
-            <!-- thumbnail section start -->
-            <div class="thumbnail-back-ground">
-                <section class="thumbnail-section">
-                    <div class="thumbnail-wrapper">
-                        <?php if( get_the_post_thumbnail() ) : ?>
-                            <div class="thumbnail">
-                                <?php the_post_thumbnail('post'); ?>
-                            </div>
-                        <?php endif; ?>
-                        <div class="thumbnail-text">
-                            <h1><?php the_title(); ?></h1>
+                        <div class="contact-button">
+                            <a href="/contact">
+                                <button class="hero-button">お問い合わせはこちら</button>
+                                <span class="btn-circle-triangle"></span>
+                            </a>
                         </div>
-
-                        <?php if(is_single()): ?>
-                            <div class="post-meta-area">
-                                <div class="cat-name">
-                                    <span>
-                                            <?php
-                                            $category = the_category(); 
-                                            if(isset($category)){
-                                            echo $category[0]->cat_name;
-                                            }
-                                            ?>
-                                    </span>
-                                </div>
-                                <div class="post-tag">
-                                    <ul class="post-meta list-inline">
-                                        <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"><i class="fa fa-clock-o"></i> <?php the_time('Y.m.d');?></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        <?php endif; ?>
                     </div>
-                </section>
-            </div>
-            <!-- thumbnail section end -->
-        <?php endif; ?>
-
+                    <div class="scrolldown"><span></span></div>
+            </section>
+        </div>
     <!-- hero section end -->
     <!-- news section start -->
         <section class="news-section">
