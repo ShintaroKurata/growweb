@@ -258,26 +258,70 @@ input,textarea {
 
 /* 1-4.button */
 .contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     margin-top: 20px;
-    padding:12px 20px;
+    padding:8px 20px;
     width: fit-content;
     border-radius: 20px;
     border: none;
     font-size: 13px;
-    color: #333333;
     background-color: #EAEAEA;
 }
 
 .section-button {
-    margin:40px 10% 0 auto;
-    padding:12px 30px;
-    width: fit-content;
-    border-radius: 20px;
-    border: none;
-    font-size: 18px;
+    padding:0.5rem 1rem;
+}
+
+.btn-text {
     color: #333333;
-    text-align: center;
-    background-color: #EAEAEA;
+}
+
+.section-btn-text {
+    font-size: 1rem;
+}
+
+.contact-button:hover {
+    background-color: #0B254B;
+}
+
+.btn-text:hover {
+    color: #EAEAEA;
+}
+
+.btn-circle-triangle {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 8px;
+    color: #0B254B;
+    line-height: 1;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 0.1em solid currentColor;
+    background: currentColor;
+    border-radius: 50%;
+    box-sizing: content-box;
+  }
+  
+.btn-circle-triangle::before {
+    content: '';
+    color: #fff;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 5px 7.7px;
+    border-left-color: currentColor;
+    border-right: 0;
+    transform: translateX(15%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .btn-wrapper {
@@ -326,52 +370,16 @@ input,textarea {
 .hero-text h2{
     color: #ffffff;
     font-size: 64px;
+    text-align: left
 }
 .hero-description {
     margin-top: 20px;
     line-height: 22px;
     font-weight: 500px;
-    font-size: 15px;
-    width: 100%;
-}
-.hero-text p {
+    font-size: 0.8rem;
     color: #ffffff;
     text-align: left;
-    font-size: 12px;
-}
-
-.btn-circle-triangle {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 5px;
-    color: #0B254B;
-    line-height: 1;
-    position: relative;
-    width: 25px;
-    height: 25px;
-    border: 0.1em solid currentColor;
-    background: currentColor;
-    border-radius: 50%;
-    box-sizing: content-box;
-  }
-  
-.btn-circle-triangle::before {
-    content: '';
-    color: #fff;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 5px 7.7px;
-    border-left-color: currentColor;
-    border-right: 0;
-    transform: translateX(15%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px){
@@ -477,9 +485,19 @@ input,textarea {
  }
 
  .news-list {
+    display: block;
+    width:100%;    
+ }
+
+ .news-list ul {
+    margin: 0 10% 0 auto;
+    width: 65%;
+ }
+
+ .news-btn {
     display: inline-block;
-    width:65%;
-    margin-right: 10%;
+    margin: 2rem 10% 0 auto;
+    width: auto;
  }
 
  .news-section li{

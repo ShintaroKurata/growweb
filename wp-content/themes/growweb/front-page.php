@@ -7,12 +7,12 @@
                         <div class="hero-description">
                             <p>私たちが目指すのは、価値あるものが適切に評価されるような仕組みづくりです。<br>あなたのサービスの認知がまだ少ないなら、その後押しを、私たちがWebを用いて支援します。</p>
                         </div>
-                        <div class="contact-button">
-                            <a href="/contact">
-                                <button class="hero-button">お問い合わせはこちら</button>
+                        <a href="/contact">
+                            <button class="contact-button">
+                                <p class="btn-text">お問い合わせはこちら</p>
                                 <span class="btn-circle-triangle"></span>
-                            </a>
-                        </div>
+                            </button>
+                        </a>
                     </div>
                     <div class="scrolldown"><span></span></div>
             </section>
@@ -22,47 +22,51 @@
         <section class="news-section">
             <h2 class="section-title">NEWS</h2>
                 <div class="news-content">
-                    <ul class="news-list">
-                        <?php
-                        $args = array(
-                            'posts_per_page'   => 5, 
-                            'orderby'          => 'ID', 
-                            'order'            => 'DESC',
-                        );
+                    <div class="news-list">
+                        <ul>
+                            <?php
+                            $args = array(
+                                'posts_per_page'   => 5, 
+                                'orderby'          => 'ID', 
+                                'order'            => 'DESC',
+                            );
 
-                        $datas = get_posts( $args );
+                            $datas = get_posts( $args );
 
-                        if ( $datas ): 
+                            if ( $datas ): 
 
-                        foreach ( $datas as $post ): 
-                            setup_postdata( $post ); 
-                        ?>
-                                <a href="<?php echo get_permalink($post->ID); ?>">
-                                <li>
-                                    
-                                    <div class="news-tag">
-                                        <?php
-                                        $category = get_the_category(); 
-                                        echo $category[0]->cat_name;
-                                        ?>
-                                    </div>
-                                    <time class="release"><?php the_time('Y.m.d'); ?></time>
-                                    <div class="news-title"><?php echo get_the_title($post->ID); ?><div>
-                                    
-                                </li>
-                                </a>
-                        <?php endforeach; ?>
-                        <?php endif; ?>
-                        <?php wp_reset_postdata(); ?>
-                    </ul>
+                            foreach ( $datas as $post ): 
+                                setup_postdata( $post ); 
+                            ?>
+                                    <a href="<?php echo get_permalink($post->ID); ?>">
+                                    <li>
+                                        
+                                        <div class="news-tag">
+                                            <?php
+                                            $category = get_the_category(); 
+                                            echo $category[0]->cat_name;
+                                            ?>
+                                        </div>
+                                        <time class="release"><?php the_time('Y.m.d'); ?></time>
+                                        <div class="news-title"><?php echo get_the_title($post->ID); ?><div>
+                                        
+                                    </li>
+                                    </a>
+                            <?php endforeach; ?>
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </ul>
+                    <div>
                     <?php
                     $category_id = get_cat_ID('お知らせ');
                     $category_link = get_category_link( $category_id );
                     ?>
-                    <div class="section-button">
-                        <a  href="<?php echo esc_url( $category_link ); ?>">
-                        <button class="hero-button">View more</button>
-                        <span class="btn-circle-triangle"></span>
+                    <div class="news-btn">
+                        <a href="<?php echo esc_url( $category_link ); ?>">
+                            <button class="contact-button section-button">
+                                <p class="btn-text section-btn-text">NEWS一覧</p>
+                                <span class="btn-circle-triangle"></span>
+                            </button>
                         </a>
                     </div>
                 </div>
