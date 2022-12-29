@@ -5,13 +5,13 @@
                     <div class="hero-text">
                         <h2>We put yours into orbit.</h2>
                         <div class="hero-description">
-                            <p>私たちが目指すのは、価値あるものが適切に評価されるような仕組みづくりです。<br>あなたのサービスの認知がまだ少ないなら、その後押しを、私たちがWebを用いて支援します。</p>
+                            <p>私たちが目指すのは、価値あるものが適切に評価されるような仕組みづくりです。<br>あなたのサービスの認知がまだ少ないなら、私たちがWebを用いて支援します。</p>
                         </div>
                         <a href="/contact">
-                            <button class="contact-button">
+                            <div class="contact-button">
                                 <p class="btn-text">お問い合わせはこちら</p>
                                 <span class="btn-circle-triangle"></span>
-                            </button>
+                            </div>
                         </a>
                     </div>
                     <div class="scrolldown"><span></span></div>
@@ -63,10 +63,10 @@
                     ?>
                     <div class="btn-wrapper">
                         <a href="<?php echo esc_url( $category_link ); ?>">
-                            <button class="contact-button section-button">
+                            <div class="contact-button section-button">
                                 <p class="btn-text section-btn-text">VIEW MORE</p>
                                 <span class="btn-circle-triangle"></span>
-                            </button>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -156,10 +156,10 @@
                 </div>
                 <div class="btn-wrapper">
                         <a href="<?php echo get_post_type_archive_link('works'); ?>">
-                            <button class="contact-button section-button">
+                            <div class="contact-button section-button">
                                 <p class="btn-text section-btn-text">VIEW MORE</p>
                                 <span class="btn-circle-triangle"></span>
-                            </button>
+                            </div>
                         </a>
                 </div>
             </div>
