@@ -52,6 +52,7 @@ growweb is distributed under the terms of the GNU GPL
         4-2-1.entry-post-works-meta
     4-3.entry-content-works
     4-4.entry-footer
+    4-5.taxonomy-archive
 5.page
     5-0,page,single共通
 6.single
@@ -138,10 +139,6 @@ input,textarea {
     
 }
 
-.mt-20 {
-    margin-top: 20px;
-}
-
 @media screen and (max-width: 768px){
     .section-title {
         font-size: 45px;
@@ -154,6 +151,48 @@ input,textarea {
     padding: 0 10% 0 0;
 }
 
+.side-works-list-item {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 0.8px solid #DDDDDD;
+    cursor: pointer;  
+}
+
+.side-works-list-item a{
+    font-size: 0.7rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.side-works-list-item img {
+    width: 78px;
+    height: 57px;
+    margin-right: 1rem;
+    object-fit:cover;
+    transition: transform .6s ease;
+}
+
+.side-works-list-item img:hover {
+    transform: scale(1.1);
+}
+
+.side-cat-links {
+    width: fit-content;
+}
+
+.side-cat-links-item {
+    display: block;
+    width: fit-content;
+    height: auto;
+    padding: 5px 15px;
+    margin: 0.8rem 0;
+    border: 0.5px solid #333;
+    color: #333;
+}
+
+.side-cat-links-item a {
+    font-size: 8px;
+}
 
 /* 1-2. header */
 /* 1-2-0.header共通 */
@@ -341,7 +380,9 @@ input,textarea {
 }
 
 .cta-button {
+    width: fit-content;
     padding: 15px 20px;
+    margin-top: 20px;
     background-color: #ffffff;
     color: #0B254B;
     border-radius: 10px;
@@ -1175,6 +1216,7 @@ input,textarea {
 }
 
 .grid-section .cat-links,.category-news .cat-links {
+    display: block;
     width: auto;
     text-align: center;
     padding: 3px 12px;
@@ -1209,6 +1251,7 @@ input,textarea {
 
 /* 3-1-1.entry-meta */
 .entry-meta {
+    display: flex;
     font-size: 0.9rem;
     margin-top: 10px;
 }
@@ -1273,7 +1316,7 @@ input,textarea {
 
 .grid-section .entry-title {
     font-size: 0.9rem;
-    margin: 8px 0 0 0;
+    margin: 6px 0 0 0;
 }
 
 /* 4-1.entry-works */
@@ -1284,7 +1327,7 @@ input,textarea {
     height: fit-content;
     font-size: 0.9rem;
     margin-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 /* 4-2.entry-post-works */
 .works-header {
@@ -1411,6 +1454,12 @@ input,textarea {
 
 .entry-footer-contact i {
     margin: 0 1rem;
+}
+
+/* 4-5.taxonomy-archive */
+.taxonomy {
+    height: fit-content;
+    padding-bottom: 40px;
 }
 
 /* --------------------------------
