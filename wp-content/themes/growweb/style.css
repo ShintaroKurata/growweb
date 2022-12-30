@@ -335,14 +335,16 @@ input,textarea {
     border: none;
     font-size: 13px;
     background-color: #EAEAEA;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 .section-button {
-    padding: 1rem 2rem;
+    padding: 1rem 2rem;    
 }
 
 .btn-text {
     color: #333333;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 .section-btn-text {
@@ -410,6 +412,27 @@ input,textarea {
     color: #ffffff;
 }
 
+@media screen and (max-width: 768px){
+    .contact-button{
+        padding: 0.8rem 1.2rem;
+    }
+
+    .section-btn-text {
+        font-size: 0.8rem;
+    }
+
+    .btn-circle-triangle {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+    }
+
+
+}
+
 /* --------------------------------
             2.front-page
 -------------------------------- */
@@ -471,7 +494,6 @@ input,textarea {
     }
 
     .hero-text p {
-        color: #ffffff;
         font-size: 10px;
     }
 }
@@ -550,6 +572,9 @@ input,textarea {
     color: #333333;
  }
 
+ .news-section li {
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
  .news-section li:hover {
     background-color: #d4e6f7;
  }
@@ -601,10 +626,21 @@ input,textarea {
 
  }
  @media screen and (max-width: 768px){
-    .news-list {
-        width:80%
-     }
+    .news-section li {
+        font-size: 0.5rem;
+    }
 
+    .news-list {
+        width: 100%;
+    }
+
+    .news-list ul {
+        width: 80%;
+    }
+
+    .news-title {
+        margin: 0 0 0 1rem;
+    }
  }
 
  /* 2-4.point */
@@ -802,7 +838,7 @@ input,textarea {
     color: #aaaaaa;
 }
 .works-tag i{
-    padding: 1px 5px;
+    padding: 1px 5px 0 0;
     font-size: 12px;
 }
 
@@ -817,7 +853,7 @@ input,textarea {
     }
 
     .works-content {
-        margin: 40px auto;
+        margin: 40px auto 0;
         width: 90%;
     }
 
@@ -831,16 +867,15 @@ input,textarea {
     }
 
     .works-title {
-        width: 300px;
+        width: 95%;
         margin: 0 auto;
         padding: 10px 0;
         font-size: 14px;
 
     }
     .works-tag {
-        width: 300px;
+        width: 95%;
         margin: 0 auto;
-        padding: 10px 0;
         font-size: 10px;
     }
 
@@ -1048,7 +1083,8 @@ input,textarea {
  @media screen and (max-width: 768px){
     .faqs-grid {
         display: block;
-        width: 90%;
+        margin-left: 10%;
+        width: 80%;
         margin-bottom: 100px;
      }
     
@@ -1087,7 +1123,7 @@ input,textarea {
     padding: 40px 0 40px 10%;
  }
 
- .cta-copy{
+ .cta-copy {
     font-size: 30px;
  }
 
@@ -1138,6 +1174,13 @@ input,textarea {
     .cta-img::after {
         transform: skewY(-10deg);
 
+    }
+    .cta-copy {
+        font-size: 1.4rem;
+    }
+
+    .cta-text {
+        font-size: 0.8rem;
     }
 }
 

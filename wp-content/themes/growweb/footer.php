@@ -8,7 +8,7 @@
             <p class="cta-text">無料相談・無料お見積りを承っておりますので、お気軽にお問い合わせください。</p>
             <div>
                 <a href="/contact">
-                    <div class="cta-button mt-20">
+                    <div class="cta-button">
                     お問い合わせはこちら
                     </div>
                 </a>
