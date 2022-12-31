@@ -261,7 +261,8 @@ input,textarea {
  
 .menu-item {
      list-style: none;
-     font-size: 14px;
+     padding: 1.4rem 0;
+     font-size: 1rem;
  }
 
 .menu-item a {
@@ -1715,9 +1716,10 @@ transform: translate(0px,10px);
     font-weight: bold;
     border-bottom: 2px solid transparent;
     transition: border-color .25s;
+    color: #ffffff;
 }
 .menu-item a:hover {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #ffffff;
 }
 .mb-btn-line.open {
     background-color: transparent; 
