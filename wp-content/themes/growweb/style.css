@@ -1609,7 +1609,6 @@ input,textarea {
     width: 80%;
     height: auto;
     margin: 0 auto;
-    padding:0 0 10% 0;
 }
 
 .type-post p,.type-page p {
@@ -1769,7 +1768,7 @@ transform: translate(0px,10px);
 .wpcf7 {
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 40px;
+    padding: 5% 0 0 0;
  }
 
  .wpcf7-form.init,.wpcf7 label,.wpcf7-form-control-wrap,.wpcf7-form-control {
@@ -1778,6 +1777,7 @@ transform: translate(0px,10px);
  }
 
  .wpcf7-form-control {
+    border: 0.4px solid #333333;
     background-color: #fff;
  }
 
