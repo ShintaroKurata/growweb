@@ -63,6 +63,7 @@ growweb is distributed under the terms of the GNU GPL
     ハンバーガーメニュー
     widget
     contactform7
+    All In One SEO
     arrow
  */
 
@@ -103,8 +104,7 @@ body{
 }
 
 #works-main {
-    margin: 10% 0 0 0;
-    padding: 0 5%;
+    padding: 10% 5% 0;
     width: 70%;
 }
 
@@ -143,6 +143,12 @@ input[type="submit"] {
 
     .two-column {
         display: block;
+    }
+
+    #works-main {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10% 0 0;
     }
 }
 
@@ -215,6 +221,13 @@ input,textarea {
     font-size: 8px;
 }
 
+@media screen and (max-width: 768px){
+    #sidebar {
+        width: 90%;
+        padding: 0;
+        margin: 10% auto;
+    }
+}
 /* 1-2. header */
 /* 1-2-0.header共通 */
 .site-header {
@@ -252,6 +265,10 @@ input,textarea {
         font-size:14px;
         padding: 20px 0;
     }
+
+    .post-menu li:hover {
+        border-bottom: 0.7px solid #ffffff;
+    }
 }
 /* 1-2-1.header-front */
 .menu{
@@ -260,9 +277,8 @@ input,textarea {
  }
  
 .menu-item {
-     list-style: none;
-     padding: 1.4rem 0;
-     font-size: 1rem;
+     list-style: none;     
+     font-size: 0.8rem;
  }
 
 .menu-item a {
@@ -275,6 +291,11 @@ input,textarea {
      border-bottom: 0.7px solid #ffffff;
 }
 
+@media screen and (max-width: 768px){
+    .menu-item {
+        padding: 1.4rem 0;
+    }
+}
 /* 1-2-2.header-page */
 /* 1-2-3.header-post */
 
@@ -1508,6 +1529,11 @@ input,textarea {
     width: 100%;
     height: auto;
     }
+
+    #works-main article {
+        padding: 0 0 10% 0;
+        margin: 10% 0 0 0;
+    }
 }
 
 /* 4-4.entry-footer */
@@ -1560,13 +1586,21 @@ input,textarea {
     font-weight: 600;
 }
 
+@media screen and (max-width: 768px){
+    .page .entry-title,.single-post .entry-title {
+        font-size: 1.5rem;
+        
+    }
+
+}
+
 
 /* --------------------------------
             6.single
 -------------------------------- */
 .type-post,.type-page {
     position: relative;
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: 0 auto;
     padding:0 0 10% 0;
@@ -1610,6 +1644,12 @@ input,textarea {
 .nav-links {
     padding:0 0 10% 0;
     margin-left: 10%;
+}
+
+@media screen and (max-width: 768px){
+    .single-works .entry-title {
+        font-size: 1.5rem;
+    }
 }
 
 /* --------------------------------
@@ -1718,9 +1758,7 @@ transform: translate(0px,10px);
     transition: border-color .25s;
     color: #ffffff;
 }
-.menu-item a:hover {
-    border-bottom: 2px solid #ffffff;
-}
+
 .mb-btn-line.open {
     background-color: transparent; 
 }
@@ -1772,6 +1810,12 @@ transform: translate(0px,10px);
 
  .wpcf7-spinner {
     width: auto;
+ }
+
+ /* All In One SEO */
+ .aioseo-breadcrumbs {
+    font-size: 0.4rem;
+    padding: 0.3rem 0 0 0;
  }
 
  /* arrow */
