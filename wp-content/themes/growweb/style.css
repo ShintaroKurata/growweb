@@ -1600,7 +1600,7 @@ input,textarea {
 -------------------------------- */
 .type-post,.type-page {
     position: relative;
-    width: 90%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     padding:0 0 10% 0;
@@ -1617,6 +1617,7 @@ input,textarea {
 
 @media screen and (max-width: 768px){
     .type-post,.type-page {
+        width: 90%;
         padding: 10% 0;
     }
 
@@ -1639,11 +1640,6 @@ input,textarea {
 
 #works-main .cat-links,#works-main .tag-links {
     display: flex;
-}
-
-.nav-links {
-    padding:0 0 10% 0;
-    margin-left: 10%;
 }
 
 @media screen and (max-width: 768px){
@@ -1674,28 +1670,6 @@ input,textarea {
 /* --------------------------------
             9.各種パーツ
 -------------------------------- */
-/* breadcrumb */
-.breadcrumb-section{
-    height: 30px;
-    width: 100%;
-}
-.breadcrumbs {
-    margin: 15px auto 0;
-    width: 60%;
-}
-
-.breadcrumbs span {
-    font-size: 12px;
-}
-
-.breadcrumbs a {
-    color: #333;
-}
-
-.breadcrumbs a:hover {
-    color: #89c6ff;
-}
-
 /* ハンバーガーメニュー */
 .mb-btn{
     display: none;   
@@ -1818,101 +1792,19 @@ transform: translate(0px,10px);
     padding: 0.3rem 0 0 0;
  }
 
- /* arrow */
- .prev-arrow {
-    /*矢印と下線の基点とするためrelativeを指定*/
-	position: relative;
-    /*形状*/
-    display: inline-block;
-	padding: 0 20px;
-    color: #333;
-    text-decoration: none;
-    outline: none;
+ /* ページネーション */
+ .nav-links {
+    display: flex;
+    padding:0 0 10% 0;
+    margin-left: 10%;
 }
 
-.prev-arrow::before {
-    content: '';
-    /*絶対配置で下線の位置を決める*/
-	position: absolute;
-    bottom:-3px;
-    right:15%;
-    /*下線の形状*/    
-    width: 85%;
-    height: 1px;
-	background:#333;
-    /*アニメーションの指定*/
-    transition: all .3s;
+.nav-previous {
+    margin: 0 2rem 0 0;
 }
 
-.prev-arrow::after {
-    content: '';
-    /*絶対配置で矢印の位置を決める*/
-	position: absolute;
-    bottom:2px;
-    left:0;
-    /*矢印の形状*/    
-    width: 15px;
-    height:1px;
-	background:#333;
-    transform: rotate(-35deg);
-    /*アニメーションの指定*/
-    transition: all .3s;
-}
-
-/*hoverした際の移動*/
-.prev-arrow:hover::before{
-    right:20%;
-}
-
-.prev-arrow:hover::after{
-    left:-5%;
-}
-
-.next-arrow {
-    /*矢印と下線の基点とするためrelativeを指定*/
-	position: relative;
-    /*形状*/
-    display: inline-block;
-	padding: 0 20px;
-    color: #333;
-    text-decoration: none;
-    outline: none;
-}
-
-.next-arrow::before {
-    content: '';
-    /*絶対配置で下線の位置を決める*/
-	position: absolute;
-    bottom:-3px;
-    left:15%;
-    /*下線の形状*/    
-    width: 85%;
-    height: 1px;
-	background:#333;
-    /*アニメーションの指定*/
-    transition: all .3s;
-}
-
-.next-arrow::after {
-    content: '';
-    /*絶対配置で矢印の位置を決める*/
-	position: absolute;
-    bottom:2px;
-    right:0;
-    /*矢印の形状*/    
-    width: 15px;
-    height:1px;
-	background:#333;
-    transform: rotate(35deg);
-    /*アニメーションの指定*/
-    transition: all .3s;
-}
-
-/*hoverした際の移動*/
-.next-arrow:hover::before{
-    left:20%;
-}
-
-.next-arrow:hover::after{
-    right:-5%;
+@media screen and (max-width: 768px){
+    .nav-links {
+        margin-left: 5%;
+    }
 }
