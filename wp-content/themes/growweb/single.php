@@ -1,4 +1,4 @@
-<?php get_header("post"); ?>
+<?php get_header("page"); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'entry-post' ); ?>
 <?php if ( comments_open() && !post_password_required() ) { comments_template( '', true ); } ?>

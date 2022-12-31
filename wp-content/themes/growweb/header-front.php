@@ -28,7 +28,7 @@
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
             </nav>
             <button type="button" class="mb-btn js-btn">
-                    <span class="mb-btn-line"></span>
+                    <span class="mb-btn-line front-color"></span>
             </button>
         </header>
     <div id="container">
