@@ -108,7 +108,7 @@ body{
     width: 70%;
 }
 
-.single main,.page main,.post-type-archive-works main,.category-news main {
+.single main,.page main,.archive main {
     width: 100%;
     height: fit-content;
     min-height: 100vh;
@@ -1383,7 +1383,7 @@ input,textarea {
 .archive-header {
     width: 80%;
     margin: 0 auto;
-    padding: 0 0 3% 0;
+    padding: 0 0 5% 0;
 }
 
 .archive-title,.archive-works-title{
