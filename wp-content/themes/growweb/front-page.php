@@ -7,7 +7,7 @@
                         <div class="hero-description">
                             <p>私たちが目指すのは、価値あるものが適切に評価されるような仕組みづくりです。<br>あなたのサービスの認知がまだ少ないなら、私たちがWebを用いて支援します。</p>
                         </div>
-                        <a href="/contact">
+                        <a href="https://growweb.jp/service/contact">
                             <div class="contact-button">
                                 <p class="btn-text">お問い合わせはこちら</p>
                                 <span class="btn-circle-triangle"></span>

@@ -1528,6 +1528,7 @@ input,textarea {
 
 .wp-block-columns p{
     margin-bottom: 8px;    
+    color: #888888;
 }
 
 @media screen and (max-width: 768px){

@@ -8,7 +8,7 @@
             <p class="cta-copy">まずはご相談ください。</p>
             <p class="cta-text">無料相談・無料お見積りを承っておりますので、お気軽にお問い合わせください。</p>
             <div>
-                <a href="/contact">
+                <a href="https://growweb.jp/service/contact">
                     <div class="cta-button mt-20">
                         お問い合わせはこちら
                     </div>
