@@ -1351,7 +1351,7 @@ input,textarea {
 /* 3-3.entry-content */
 .entry-content {
     margin-top: 12px;
-    padding-top: 12px;
+    padding-top: 2px;
     border-top: 0.5px solid #333333;
 }
 
@@ -1814,4 +1814,13 @@ transform: translate(0px,10px);
     .nav-links {
         margin-left: 5%;
     }
+}
+
+/* table */
+table {    
+    overflow-x: scroll;
+}
+
+thead {
+    background-color: #738096;
 }
