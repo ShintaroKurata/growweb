@@ -246,3 +246,13 @@ function create_post_type() {
   }
   add_action( 'init', 'create_post_type' );
 //   カスタム投稿タイプ終了
+function mysite_feed_request($vars) {
+  if ( isset( $vars['feed'] ) && !isset( $vars['post_type'] ) ) {
+      $vars['post_type'] = array(
+'post',
+'works',
+);
+  }
+  return $vars;
+}
+add_filter( 'request', 'mysite_feed_request' );
